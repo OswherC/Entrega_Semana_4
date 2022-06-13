@@ -20,7 +20,7 @@ figure img {
 
 figure {
     position: relative;
-    top:248px;
+    top:210px;
     transition: all ease .5s;
     transform-style: preserve-3d;
     transform: perspective(600px) rotateY(0deg);
