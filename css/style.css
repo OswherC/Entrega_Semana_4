@@ -8,7 +8,7 @@ main {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(7, 1fr);
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -16,16 +16,18 @@ figure,
 figure img {
     display: inline-block;
     width: 100%;
+    border-radius: 10px;
 }
 
 figure {
     position: relative;
-    top:210px;
+    top:215px;
     transition: all ease .5s;
     transform-style: preserve-3d;
     transform: perspective(600px) rotateY(0deg);
     cursor: pointer;
-    box-shadow: 3px 3px 16px rgb(0, 0, 0, 0.6);
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 
 figure::after {
