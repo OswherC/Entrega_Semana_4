@@ -1,9 +1,18 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #a599ff;
+    background-image: url(/images/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+ /* Estilo para la cuadricula de las tarjetas */
 main {
     display: grid;
     grid-gap: 10px;
@@ -11,7 +20,7 @@ main {
     max-width: 900px;
     margin: auto;
 }
-
+ /* Estilos para las tarjetas */
 figure,
 figure img {
     display: inline-block;

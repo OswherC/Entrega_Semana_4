@@ -1,4 +1,4 @@
-class Memorama {
+class MemoryPlay {
 
     constructor() {
 
@@ -6,6 +6,8 @@ class Memorama {
 
         this.card1 = null;
         this.card2 = null;
+
+        // Arreglo para establecer las imagenes de las cartas que se vana a utilizar
 
         this.availableImages = [1, 2, 3, 4, 5, 6, 7];
         this.orderForThisRound = [];
@@ -48,13 +50,15 @@ class Memorama {
 
     }
 
+// Codigo que da apertura a las  cartas y da tiempo para memorizarlas
+    
     openCards() {
 
         this.cards.forEach(card => card.classList.add("opened"));
 
         setTimeout(() => {
             this.closeCards();
-        }, 10000);
+        }, 4000);
 
     }
 
@@ -140,12 +144,18 @@ class Memorama {
 
         if (this.maxPairNumber == this.foundPairs) {
 
-            alert("¡Ganaste!");
+// Codigo del mensaje de alerta al lograr hacer match de todas las tarjetas
+            
+            Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '¡Felicitaciones! Lo lograste.',
+            showConfirmButton: false,
+            })
+
             this.setNewGame();
             
         }
-
-
 
     }
 
@@ -162,6 +172,6 @@ class Memorama {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    new Memorama();
+    new MemoryPlay();
 
 });
